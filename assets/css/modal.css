@@ -1,0 +1,123 @@
+.modal {
+  max-width: 300px;
+  min-width: 300px;
+  height: auto;
+  padding: 0rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+dialog {
+  animation: hide .3s forwards;
+}
+
+dialog[open] {
+  animation: show .3s forwards;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 1);
+}
+
+.modal.show {
+  animation: show .3s forwards;
+}
+
+
+.modal .modal-content {
+  position: relative;
+}
+
+.modal img {
+  width: 75%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal h2 {
+  font-size: 2rem;
+  margin: 1rem 0px;
+  text-transform: capitalize;
+}
+
+.modal p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.modal .types {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  gap: .5rem;
+}
+
+.modal .stats {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal .number {
+  color: #000;
+  opacity: .3;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.modal .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  background: #eee;
+}
+
+@keyframes show {
+
+  from {
+    display: none;
+    opacity: 0;
+    padding: 0rem;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    padding: 2rem;
+  }
+}
+
+@keyframes hide {
+  from {
+    display: block;
+    opacity: 1;
+    padding: 2rem;
+  }
+
+  to {
+    display: none;
+    opacity: 0;
+    padding: 0rem;
+  }
+}
+
+
+
